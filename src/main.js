@@ -97,7 +97,7 @@ stopButton.addEventListener('click', () => {
   background.pause();
   background.currentTime = 0;
   ar?.stop();
-  overlay.hidden = false;
+  overlay.hidden = true;
   startButton.disabled = false;
   stopButton.disabled = true;
   muteButton.disabled = true;
