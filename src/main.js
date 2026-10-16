@@ -37,7 +37,7 @@ function loseTarget(index) {
 }
 
 async function initialize() {
-  ar = new MindARThree({ container, imageTargetSrc: asset('targets/targets.mind'), uiScanning: "no", maxTrack: 1 });
+  ar = new MindARThree({ container, imageTargetSrc: asset('targets/targets.mind'), filterMinCF: 0.001, filterBeta: 0.01, warmupTolerance: 5, missTolerance: 10, maxTrack: 2 });
   const { renderer, scene, camera } = ar;
   scene.add(new THREE.HemisphereLight(0xffffff, 0x444444, 2.2));
   const directional = new THREE.DirectionalLight(0xffffff, 1.5);
